@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const app = express();
-const port = 3321;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -39,6 +39,6 @@ app.post('/webhook', (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
