@@ -1,23 +1,23 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3221;
 
 app.use(express.json());
 
 app.use(bodyParser.json());
 
-const WEBHOOK_SECRET = 'your_webhook_secret';
+const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 
-// Endpoint to receive webhook payloads
 app.post('/webhook', (req, res) => {
     const signature = req.headers['x-connect-it-token'];
     const payload = JSON.stringify(req.body);
     const hash = crypto.createHmac('sha256', WEBHOOK_SECRET)
                        .update(payload)
                        .digest('hex');
-
+    
     if (signature !== hash) {
         console.log('Invalid signature');
         return res.status(400).json({ error: 'Invalid signature' });
