@@ -16,7 +16,11 @@ You can deploy this code to any server that supports Node.js.
 
 For rapid deployment, you can use our one-click deployment to Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMobileAssistant%2Fwebhooks-example&env=WEBHOOK_SECRET&envDescription=Webhook%20secret&envLink=https%3A%2F%2Fdocs.mobileassistant.us%2Fdocs%2Fwebhooks%2F&project-name=connect-webhook-example&repository-name=connect-webhook-example&redirect-url=https%3A%2F%2Fdev.mobileassistant.us)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMobileAssistant%2Fwebhooks-example&env=WEBHOOK_SECRET&envDescription=Webhook%20secret&envLink=https%3A%2F%2Fdocs.mobileassistant.us%2Fdocs%2Fwebhooks%2F&project-name=connect-webhook-example&repository-name=connect-webhook-example)
+
+You'll want to leave the `WEBHOOK_SECRET` blank. You can set it later in the Vercel dashboard.
+
+After deploying, you'll need to register the webhook URL as `https://<your-deployed-url>/webhook`.
 
 ### Manual Deployment
 
@@ -28,8 +32,6 @@ If you want to manually deploy this, you can do so by following these steps:
 4. Start the server `npm start`
 
 Make sure to replace `<your-webhook-secret>` with the webhook secret from your `.env` file.
-
-After deploying, you'll need to register the webhook URL as `https://<your-deployed-url>/webhook`.
 
 ## Register a webhook
 
