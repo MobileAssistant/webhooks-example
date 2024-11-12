@@ -26,9 +26,13 @@ app.post('/webhook', (req, res) => {
     const eventType = req.body.type;
 
     switch (eventType) {
+        case 'test.completed':
+            // This is an example event, you can delete it once you've tested your webhook
+            console.log('Received test.completed event:', req.body);
+            break;
         case 'transcript.completed':
+            // Handle the transcript.completed event -- your code here
             console.log('Received transcript.completed event:', req.body);
-            // Handle the transcript.completed event
             break;
         default:
             console.log('Invalid event type');
