@@ -16,7 +16,7 @@ You can deploy this code to any server that supports Node.js.
 
 For rapid deployment, you can use our one-click deployment to Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMobileAssistant%2Fwebhooks-example&env=WEBHOOK_SECRET&envDescription=Webhook%20secret&envLink=https%3A%2F%2Fdocs.mobileassistant.us%2Fdocs%2Fwebhooks%2F&project-name=connect-webhook-example&repository-name=connect-webhook-example)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMobileAssistant%2Fwebhooks-example&env=WEBHOOK_SECRET&envDescription=Webhook%20secret&envLink=https%3A%2F%2Fdocs.mobileassistant.us%2Fdocs%2Fwebhooks%2F&project-name=mobileassistant-webhook-example&repository-name=mobileassistant-webhook-example)
 
 You'll want to leave the `WEBHOOK_SECRET` blank. You can set it later in the Vercel dashboard.
 
